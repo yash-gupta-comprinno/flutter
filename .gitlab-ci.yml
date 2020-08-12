@@ -2,14 +2,11 @@ stages:
   - build
 
 flutter_build_android:
-  stage: build # kind of job
-  before_script:
-    - flutter packages get
-    - flutter clean
+  stage: build # kind of jo
   script:
     - flutter build apk
   artifacts:
     paths:
       - build/app/outputs/apk/release/app-release.apk
   tags:
-    - flutter-tag
+    - flutter
